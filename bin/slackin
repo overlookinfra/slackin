@@ -12,7 +12,8 @@ args
   .option(['P', 'path'], 'Path to serve slackin under', '/')
   .option(['s', 'silent'], 'Do not print out warns or errors')
   .option(['x', 'cors'], 'Enable CORS for all routes')
-  .option(['C', 'coc'], 'Full URL to a CoC that needs to be agreed to')
+  .option(['C', 'coc'], 'Full URL to a CoC that needs to be agreed to', process.env.SLACK_COC)
+  .option(['O', 'privacy'], 'Full URL to a privacy policy that must be agreed to', process.env.SLACK_PRIVACY)
   .option(['S', 'css'], 'Full URL to a custom CSS file to use on the main page')
   .option(['?', 'help'], 'Show the usage information')
 

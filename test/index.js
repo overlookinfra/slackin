@@ -15,7 +15,7 @@ describe('slackin', () => {
         });
 
       nock('https://myorg.slack.com')
-        .get('/api/channels.list?token=mytoken')
+        .get('/api/conversations.list?token=mytoken')
         .reply(200, {
           ok: true,
           channels: [{}]
@@ -89,7 +89,7 @@ describe('slackin', () => {
         });
 
       nock('https://myorg.slack.com')
-        .get('/api/channels.list?token=mytoken')
+        .get('/api/conversations.list?token=mytoken')
         .reply(200, {
           ok: true,
           channels: [{}]
